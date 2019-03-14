@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Hangman</string>
+    <string name="action_settings">Random from String array</string>
+    <string name="letter_hint">Letter</string>
+    <string name="check_letter">Check Letter</string>
+    <string name="check_word">Check Word</string>
+    <string-array name="wordsy">
+        <item>szklanka</item>
+        <item>umywalka</item>
+        <item>tak</item>
+        <item>analfabeta</item>
+        <item>kokon</item>
+    </string-array>
+</resources>
