@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     StringBuilder guessWord;//by złożoność nie była duża
 
 
-    int lines = 0;
+    //int lines = 0;
     ArrayList<String> mysteryWords = new ArrayList<>();
     //String line;
 
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         iv = findViewById(R.id.imagine_v);
         tv = findViewById(R.id.textView);
         tv2 = findViewById(R.id.textView2);
+
 
 
         /*dr = ResourcesCompat.getDrawable(getResources(), R.drawable.hang_zero, null);
@@ -74,12 +75,15 @@ public class MainActivity extends AppCompatActivity {
             //Scanner sc = new Scanner(isr);
 
             while((temp = lnr.readLine()) != null){
-                if(!temp.equals("")) {
+                if(!temp.equals(""))
+                    mysteryWords.add(temp);
+
+                /*if(!temp.equals("")) {
                     mysteryWords.add(temp);
                     lines++;
                 }
                 else
-                    lines--;
+                    lines--;*/
             }
             //lines = lnr.getLineNumber(); //łączna liczba linii
 
@@ -122,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                             temp = guessWord.toString();
 
                             //zamieniamy * na daną liczbę
-                            //sprawdza i doczasu gyd wartość i istnieje wgl!
+                            //sprawdza i doczasu gdy wartość i istnieje wgl!
                             for (int i = 0; (i = mysteryWord.indexOf(t, i)) >= 0; i++) {
                                 //Log.d("i = ", "" + i);
                                 guessWord.setCharAt(i, t);
